@@ -27,6 +27,18 @@ object Form3: TForm3
         Caption = 'Input Data Kelas'
         OnClick = InputDataKelas1Click
       end
+      object InputDataWalikelas1: TMenuItem
+        Caption = 'Input Data Walikelas'
+        OnClick = InputDataWalikelas1Click
+      end
+      object InputDataOrangtua1: TMenuItem
+        Caption = 'Input Data Orang Tua'
+        OnClick = InputDataOrangtua1Click
+      end
+      object InputDataUser1: TMenuItem
+        Caption = 'Input Data User'
+        OnClick = InputDataUser1Click
+      end
     end
   end
 end
