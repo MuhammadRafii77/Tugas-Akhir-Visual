@@ -15,11 +15,17 @@ type
     InputDataWalikelas1: TMenuItem;
     InputDataOrangtua1: TMenuItem;
     InputDataUser1: TMenuItem;
+    InputDataRiwayatPoin1: TMenuItem;
+    InputDataHubungan1: TMenuItem;
+    InputDataPoin1: TMenuItem;
     procedure InputDataSiswa1Click(Sender: TObject);
     procedure InputDataKelas1Click(Sender: TObject);
     procedure InputDataWalikelas1Click(Sender: TObject);
     procedure InputDataOrangtua1Click(Sender: TObject);
     procedure InputDataUser1Click(Sender: TObject);
+    procedure InputDataRiwayatPoin1Click(Sender: TObject);
+    procedure InputDataHubungan1Click(Sender: TObject);
+    procedure InputDataPoin1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +37,7 @@ var
 
 implementation
 
-uses Unit1, Unit2,unit4,unit5,unit6;
+uses Unit1, Unit2,unit4,unit5,unit6,unit7,unit8,unit9;
 
 {$R *.dfm}
 
@@ -51,23 +57,44 @@ end;
 
 procedure TForm3.InputDataWalikelas1Click(Sender: TObject);
 begin
- if Form3=nil then
-  Form3:=TForm3.Create(Application);
-  Form3.Show;
-end;
-
-procedure TForm3.InputDataOrangtua1Click(Sender: TObject);
-begin
  if Form4=nil then
   Form4:=TForm4.Create(Application);
   Form4.Show;
 end;
 
-procedure TForm3.InputDataUser1Click(Sender: TObject);
+procedure TForm3.InputDataOrangtua1Click(Sender: TObject);
 begin
  if Form5=nil then
   Form5:=TForm5.Create(Application);
   Form5.Show;
+end;
+
+procedure TForm3.InputDataUser1Click(Sender: TObject);
+begin
+ if Form6=nil then
+  Form6:=TForm6.Create(Application);
+  Form6.Show;
+end;
+
+procedure TForm3.InputDataRiwayatPoin1Click(Sender: TObject);
+begin
+if Form7=nil then
+  Form7:=TForm7.Create(Application);
+  Form7.Show;
+end;
+
+procedure TForm3.InputDataHubungan1Click(Sender: TObject);
+begin
+  if Form8=nil then
+  Form8:=TForm8.Create(Application);
+  Form8.Show;
+end;
+
+procedure TForm3.InputDataPoin1Click(Sender: TObject);
+begin
+  if Form9=nil then
+  Form9:=TForm9.Create(Application);
+  Form9.Show;
 end;
 
 end.
