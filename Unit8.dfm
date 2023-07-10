@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 192
-  Top = 153
+  Left = 509
+  Top = 213
   Width = 1305
   Height = 675
   Caption = 'Input Data Hubungan'
@@ -93,6 +93,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'SIMPAN'
     TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 200
@@ -101,6 +102,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'EDIT'
     TabOrder = 5
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 296
@@ -109,6 +111,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'HAPUS'
     TabOrder = 6
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 392
@@ -117,6 +120,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'CLEAR FROM'
     TabOrder = 7
+    OnClick = btn4Click
   end
   object dbgrd1: TDBGrid
     Left = 88
@@ -130,6 +134,7 @@ object Form8: TForm8
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

@@ -1,10 +1,10 @@
-object Form1: TForm1
+object Form6: TForm6
   Left = 192
   Top = 153
   Width = 1305
   Height = 675
-  Caption = 'Form1'
-  Color = clBtnFace
+  Caption = 'Input Data'
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -89,30 +89,22 @@ object Form1: TForm1
     TabOrder = 4
     OnClick = btn1Click
   end
-  object btn2: TButton
-    Left = 160
-    Top = 256
-    Width = 75
-    Height = 25
-    Caption = 'HAPUS'
-    TabOrder = 5
-  end
   object btn3: TButton
-    Left = 256
+    Left = 272
     Top = 256
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 352
+    Left = 376
     Top = 256
     Width = 75
     Height = 25
     Caption = 'CLEAR FORM'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = btn4Click
   end
   object dbgrd1: TDBGrid
@@ -121,12 +113,22 @@ object Form1: TForm1
     Width = 705
     Height = 153
     DataSource = ds1
-    TabOrder = 8
+    TabOrder = 7
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+  end
+  object btn2: TButton
+    Left = 168
+    Top = 256
+    Width = 75
+    Height = 25
+    Caption = 'HAPUS'
+    TabOrder = 8
+    OnClick = btn2Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

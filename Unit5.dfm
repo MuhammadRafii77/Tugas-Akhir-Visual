@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 197
-  Top = 228
+  Left = 890
+  Top = 190
   Width = 1305
   Height = 675
   Caption = 'Input Data Ortu'
@@ -82,6 +82,13 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
   end
+  object STATUS: TLabel
+    Left = 368
+    Top = 240
+    Width = 38
+    Height = 13
+    Caption = 'STATUS'
+  end
   object e1: TEdit
     Left = 128
     Top = 80
@@ -106,6 +113,13 @@ object Form5: TForm5
     ItemHeight = 13
     TabOrder = 2
     Text = 'c1'
+    Items.Strings = (
+      'SD'
+      'SMP'
+      'SMA/K'
+      'S1'
+      'S2'
+      'S3')
   end
   object e3: TEdit
     Left = 128
@@ -147,6 +161,9 @@ object Form5: TForm5
     ItemHeight = 13
     TabOrder = 7
     Text = 'c2'
+    Items.Strings = (
+      'Laki-LakI'
+      'Perempuan')
   end
   object btn1: TButton
     Left = 64
@@ -155,6 +172,7 @@ object Form5: TForm5
     Height = 25
     Caption = 'SIMPAN'
     TabOrder = 8
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 176
@@ -163,6 +181,7 @@ object Form5: TForm5
     Height = 25
     Caption = 'EDIT'
     TabOrder = 9
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 280
@@ -171,6 +190,7 @@ object Form5: TForm5
     Height = 25
     Caption = 'HAPUS'
     TabOrder = 10
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 392
@@ -179,6 +199,7 @@ object Form5: TForm5
     Height = 25
     Caption = 'CLEAR FORM'
     TabOrder = 11
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 496
@@ -200,6 +221,19 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+  end
+  object c3: TComboBox
+    Left = 448
+    Top = 240
+    Width = 145
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 14
+    Text = 'c3'
+    Items.Strings = (
+      'Kandung'
+      'Wali')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

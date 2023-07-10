@@ -40,6 +40,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -48,6 +49,7 @@ type
 
 var
   Form4: TForm4;
+  id : string;
 
 implementation
 
@@ -117,6 +119,19 @@ begin
   zqry1.SQL.Clear;
   zqry1.SQL.Add('SELECT * FROM tb_walikelas');
   zqry1.Open;
+end;
+
+procedure TForm4.dbgrd1CellClick(Column: TColumn);
+begin
+  id:=zqry1.Fields[0].AsString;
+  e1.Text:=zqry1.Fields[1].AsString;
+  e2.Text:=zqry1.Fields[2].AsString;
+  c1.Text:=zqry1.Fields[3].AsString;
+  e3.Text:=zqry1.Fields[4].AsString;
+  e4.Text:=zqry1.Fields[5].AsString;
+  c2.Text:=zqry1.Fields[6].AsString;
+  e5.Text:=zqry1.Fields[7].AsString;
+  c3.Text:=zqry1.Fields[8].AsString;
 end;
 
 end.

@@ -29,6 +29,7 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -37,7 +38,7 @@ type
 
 var
   Form9: TForm9;
-
+  id : string;
 implementation
 
 {$R *.dfm}
@@ -81,6 +82,15 @@ begin
   e2.Clear;
   c1.ItemIndex := -1;
   e3.Clear;
+end;
+
+procedure TForm9.dbgrd1CellClick(Column: TColumn);
+begin
+  id:=zqry1.Fields[0].AsString;
+  e1.Text:=zqry1.Fields[1].AsString;
+  e2.Text:=zqry1.Fields[2].AsString;
+  c1.Text:=zqry1.Fields[3].AsString;
+  e3.Text:=zqry1.Fields[4].AsString;
 end;
 
 end.

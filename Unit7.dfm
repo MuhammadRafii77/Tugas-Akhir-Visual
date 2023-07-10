@@ -3,6 +3,7 @@ object Form7: TForm7
   Top = 153
   Width = 1305
   Height = 675
+  ActiveControl = btn1
   Caption = 'Input Data Riwayat Poin'
   Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
@@ -122,22 +123,13 @@ object Form7: TForm7
     TabOrder = 4
     Text = 'e5'
   end
-  object m1: TMemo
-    Left = 408
-    Top = 128
-    Width = 185
-    Height = 25
-    Lines.Strings = (
-      'm1')
-    TabOrder = 5
-  end
   object c1: TComboBox
     Left = 408
     Top = 160
     Width = 145
     Height = 21
     ItemHeight = 13
-    TabOrder = 6
+    TabOrder = 5
     Text = 'c1'
     Items.Strings = (
       '1'
@@ -148,7 +140,7 @@ object Form7: TForm7
     Top = 200
     Width = 121
     Height = 21
-    TabOrder = 7
+    TabOrder = 6
     Text = 'e6'
   end
   object btn1: TButton
@@ -157,7 +149,8 @@ object Form7: TForm7
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 8
+    TabOrder = 7
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 192
@@ -165,7 +158,8 @@ object Form7: TForm7
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 9
+    TabOrder = 8
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 288
@@ -173,7 +167,8 @@ object Form7: TForm7
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 10
+    TabOrder = 9
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 384
@@ -181,7 +176,8 @@ object Form7: TForm7
     Width = 75
     Height = 25
     Caption = 'CELAR FORM'
-    TabOrder = 11
+    TabOrder = 10
+    OnClick = btn4Click
   end
   object dbgrd1: TDBGrid
     Left = 32
@@ -189,12 +185,22 @@ object Form7: TForm7
     Width = 585
     Height = 145
     DataSource = ds1
-    TabOrder = 12
+    TabOrder = 11
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+  end
+  object d1: TDateTimePicker
+    Left = 400
+    Top = 128
+    Width = 186
+    Height = 21
+    Date = 45114.813845787040000000
+    Time = 45114.813845787040000000
+    TabOrder = 12
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
